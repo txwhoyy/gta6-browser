@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marisol Heat — an open-world crime game</title>
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #14091f;
+    min-height: 100%;
+    font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+    color: #f5eefc;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px 10px 26px;
+    box-sizing: border-box;
+  }
+  h1 {
+    font-size: 15px;
+    letter-spacing: 0.32em;
+    margin: 0;
+    color: #ff5da2;
+    font-weight: 800;
+  }
+  canvas {
+    width: min(1280px, 96vw);
+    height: auto;
+    aspect-ratio: 16 / 9;
+    background: #58a05c;
+    border-radius: 10px;
+    box-shadow: 0 18px 60px rgba(0, 0, 0, 0.55), 0 0 0 2px rgba(255, 93, 162, 0.35);
+    display: block;
+  }
+  p {
+    margin: 0;
+    font-size: 13px;
+    color: rgba(245, 238, 252, 0.72);
+    text-align: center;
+    max-width: 900px;
+    line-height: 1.5;
+  }
+  kbd {
+    background: rgba(255, 255, 255, 0.14);
+    border-radius: 4px;
+    padding: 0 5px;
+    font-family: inherit;
+  }
+</style>
+</head>
+<body>
+<h1>MARISOL HEAT</h1>
+<canvas id="game" width="1280" height="720"></canvas>
+<p>
+  An open-world crime game in the port city of Marisol. Walk and drive with
+  <kbd>WASD</kbd> or the arrow keys, take a car with <kbd>F</kbd>, punch with
+  <kbd>J</kbd> or a click, run with <kbd>Shift</kbd>, pause with <kbd>P</kbd>,
+  sound with <kbd>M</kbd>. Take jobs from Madame Zara at the boardwalk beacon —
+  and mind the stars in the corner: they are the law, and the law is coming.
+</p>
+<script type="module" src="src/main.js"></script>
+</body>
+</html>
