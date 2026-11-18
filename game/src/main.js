@@ -63,6 +63,7 @@ class Game {
       this.frozen = true;
     }
     window.__shotReady = false;
+    window.__marisol = this; // a handle for the maker's own play-tests
 
     const unlock = () => this.sound.unlock();
     window.addEventListener('keydown', unlock);

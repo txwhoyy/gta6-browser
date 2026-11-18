@@ -58,15 +58,15 @@ function stageChase(game) {
   game.missions.stepIndex = 1; // the escape step, sirens already earned
   game.wanted.stars = 3;
   game.wanted.heat = 0;
-  const sedan = makeCar(1900, 1623, Math.PI, '#f7d154', 'traffic');
+  const sedan = makeCar(1900, 1623, Math.PI - 0.1, '#f7d154', 'traffic');
   sedan.vx = -252;
   sedan.speed = 252;
   game.traffic.cars.push(sedan);
   game.player.enterCar(sedan);
-  const copA = makeCar(2075, 1605, Math.PI, PALETTE.policeBody, 'police');
+  const copA = makeCar(2045, 1598, Math.PI, PALETTE.policeBody, 'police');
   copA.driver = 'police';
   copA.vx = -238;
-  const copB = makeCar(2170, 1648, Math.PI, PALETTE.policeBody, 'police');
+  const copB = makeCar(2125, 1662, Math.PI + 0.08, PALETTE.policeBody, 'police');
   copB.driver = 'police';
   copB.vx = -226;
   game.police.cars.push(copA, copB);

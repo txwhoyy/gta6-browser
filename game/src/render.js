@@ -351,14 +351,16 @@ export class Renderer {
     ctx.lineWidth = 1.5;
     ctx.stroke();
     if (isPolice) {
+      // White door panels on the flanks, so the navy body stays the read.
       ctx.fillStyle = PALETTE.policeTrim;
-      ctx.fillRect(-8, -CAR.width / 2 + 1, 17, CAR.width - 2);
+      ctx.fillRect(-8, -CAR.width / 2 + 1.5, 17, 5.5);
+      ctx.fillRect(-8, CAR.width / 2 - 7, 17, 5.5);
       // Light bar: red and blue halves trading flashes.
       const flash = Math.sin(this.time * 11) > 0;
-      ctx.fillStyle = flash ? '#ff3b30' : '#7a1610';
-      ctx.fillRect(-6, -8, 12, 7);
-      ctx.fillStyle = flash ? '#1650c8' : '#3b82f6';
-      ctx.fillRect(-6, 1, 12, 7);
+      ctx.fillStyle = flash ? '#ff3b30' : '#8a1a12';
+      ctx.fillRect(-7, -9, 14, 8);
+      ctx.fillStyle = flash ? '#1a56d8' : '#3b82f6';
+      ctx.fillRect(-7, 1, 14, 8);
     }
     // Cabin: windshield, roof, rear window.
     ctx.fillStyle = 'rgba(24, 30, 44, 0.88)';
